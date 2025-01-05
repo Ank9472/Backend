@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "start backend learnings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "chai",
+    "backend"
+  ],
+  "author": "ANKIT TIWARI",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
