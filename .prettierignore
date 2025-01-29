@@ -1,0 +1,5 @@
+/.vscose
+
+*.env
+>env
+>node_modules
