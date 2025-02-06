@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
-import { DB_NAME } from "../constants";
+// import { DB_NAME } from "../constants";
+
 
 const connectDB = async () => {
     try {
-    const connectionInstance =  await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
+        if (!process.env.MONGODB_URI) {
+            throw new Error("MONGODB_URI environment variable is not defined");
+        }
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
         console.log(`\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host}`);
     } catch (error) {
         console.error("ERROR:", error);
@@ -12,15 +16,6 @@ const connectDB = async () => {
 }
 
 export default connectDB;
-
-
-
-
-
-
-
-
-
 
 
 
