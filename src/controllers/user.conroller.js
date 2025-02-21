@@ -5,3 +5,7 @@ const registerUser = asyncHandler(async (req, res) => {
         message: "ok"
      });
 });
+
+
+// yaha par hame console.log  karna chahiye jisse ki sare files ko explore kar ske 
+//exports default and wihout it exports is meanings different
